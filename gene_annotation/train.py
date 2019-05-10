@@ -9,7 +9,7 @@ import torch.optim as optim
 import torch.autograd as autograd
 import matplotlib.pyplot as plt
 from progress.bar import Bar
-
+plt.switch_backend('agg')
 def train(train_inputs, train_labels, test_data, test_labels, sent_size):
     fcNet = net.Lstm_Net(sent_size)
     criterion = nn.BCELoss()
